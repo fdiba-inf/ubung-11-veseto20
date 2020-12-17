@@ -4,12 +4,16 @@ public class LinkedStack {
     private Node topNode;
 
     public boolean isEmpty() {
-        // Check if stack has no elements
-        return false;
+        return topNode==null;
     }
 
     public void push(String data) {
-        // Push element to stack
+      Node newNode = new Node(data);
+        if (isEmpty()){
+          topNode = newNode;
+          } else{
+            
+          }
     }
 
     public String pop() {
