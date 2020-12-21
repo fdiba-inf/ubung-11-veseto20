@@ -12,13 +12,20 @@ public class LinkedStack {
         if (isEmpty()){
           topNode = newNode;
           } else{
-            
+             newNode.setNextNode(topNode);
+             topNode = newNode;
+        }
           }
-    }
+    
 
     public String pop() {
-        // Pop element from stack
-        return null;
+        if (isEmpty()) {
+            return null;
+        } else {
+            String data = topNode.getData();
+            topNode = topNode.getNextNode();
+            return data;
+        }
     }
 
     @Override
